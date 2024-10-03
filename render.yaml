@@ -1,8 +1,9 @@
 services:
-  - type: static
-    name: my-react-app
+  - type: web
+    name: js-backend
     env: node
     plan: free
-    buildCommand: npm install && npm run build
-    publishDirectory: dist
+    buildCommand: npm install && npx vite build
+    startCommand: npm run preview
     autoDeploy: true
+    publishDirectory: dist
